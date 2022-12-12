@@ -1,0 +1,519 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(185deg, 41%, 84%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  height: 70%;
+}
+
+.splitter {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.splitter h1 {
+  font-family: "Space Mono", monospace;
+  text-transform: uppercase;
+  word-break: break-all;
+  width: 104px;
+  letter-spacing: 10px;
+  font-size: 20px;
+  color: hsl(186deg, 14%, 43%);
+}
+
+.container {
+  width: 770px;
+  height: 390px;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0px auto;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.inputInformation {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0px auto;
+}
+
+.billinput {
+  width: 95%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.billinput p {
+  font-family: "Space Mono", monospace;
+  color: hsl(184deg, 14%, 56%);
+}
+.billinput div {
+  margin-top: 5px;
+  padding: 0px 20px 0 20px;
+  width: 100%;
+  height: 37px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: hsl(189deg, 41%, 97%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.billinput div input {
+  width: 100%;
+  height: 100%;
+  background-color: hsl(189deg, 41%, 97%);
+  border: none;
+  cursor: pointer;
+  outline: none;
+  text-align: right;
+  font-family: "Space Mono", monospace;
+  font-size: 21px;
+  color: hsl(183deg, 100%, 15%);
+}
+.billinput div input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: 21px;
+  color: hsl(183deg, 100%, 15%);
+}
+.billinput div input::-webkit-outer-spin-button, .billinput div input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.billinput div:hover {
+  border: 2px solid hsl(172deg, 67%, 45%);
+}
+
+.selectTip {
+  width: 95%;
+  overflow: hidden;
+}
+.selectTip > p {
+  margin-top: 30px;
+  font-family: "Space Mono", monospace;
+  color: hsl(184deg, 14%, 56%);
+}
+.selectTip .Percentage {
+  margin-top: 10px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 105px);
+  grid-template-rows: repeat(2 45px);
+  column-gap: 9px;
+  row-gap: 10px;
+}
+.selectTip .Percentage .tenPercentage {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.selectTip .Percentage .fiftyPercentage {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.selectTip .Percentage .customPercentage {
+  text-align: right;
+  background-color: hsl(183deg, 100%, 15%);
+  font-family: "Space Mono", monospace;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 20px;
+  padding-right: 5px;
+}
+.selectTip .Percentage .customPercentage::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: hsl(0deg, 0%, 100%);
+}
+.selectTip .Percentage .customPercentage::-webkit-outer-spin-button, .selectTip .Percentage .customPercentage::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.selectTip .Percentage .customPercentage:focus {
+  opacity: 0.9;
+  background-color: hsl(0deg, 0%, 100%);
+  border: 1px solid hsl(172deg, 67%, 45%);
+}
+.selectTip .Percentage button {
+  cursor: pointer;
+  width: 105px;
+  height: 45px;
+  border-radius: 5px;
+  background-color: hsl(183deg, 100%, 15%);
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Space Mono", monospace;
+  font-size: 20px;
+  border: none;
+}
+.selectTip .Percentage button:focus {
+  opacity: 0.9;
+  background-color: hsl(172deg, 67%, 45%);
+}
+
+.numberOfPeople {
+  margin-top: 30px;
+  width: 90%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.numberOfPeople p {
+  font-family: "Space Mono", monospace;
+  color: hsl(184deg, 14%, 56%);
+}
+.numberOfPeople div {
+  margin-top: 10px;
+  padding: 0px 20px 0 20px;
+  width: 100%;
+  height: 45px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: hsl(189deg, 41%, 97%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.numberOfPeople div input {
+  width: 100%;
+  height: 100%;
+  background-color: hsl(189deg, 41%, 97%);
+  border: none;
+  cursor: pointer;
+  outline: none;
+  text-align: right;
+  font-family: "Space Mono", monospace;
+  font-size: 21px;
+  color: hsl(183deg, 100%, 15%);
+}
+.numberOfPeople div input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: 21px;
+  color: hsl(183deg, 100%, 15%);
+}
+.numberOfPeople div input::-webkit-outer-spin-button, .numberOfPeople div input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.numberOfPeople div:hover {
+  border: 2px solid hsl(172deg, 67%, 45%);
+}
+
+.outputInformation {
+  width: 50%;
+  height: 100%;
+  background-color: hsl(183deg, 100%, 15%);
+  border-radius: 20px;
+  padding: 35px 35px 0px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.outputInformation .TipAmount, .outputInformation .Total {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: space-between;
+}
+.outputInformation .TipAmount div p, .outputInformation .Total div p {
+  font-family: "Space Mono", monospace;
+  color: hsl(0deg, 0%, 100%);
+}
+.outputInformation .TipAmount div small, .outputInformation .Total div small {
+  font-family: "Space Mono", monospace;
+  color: hsl(184deg, 14%, 56%);
+}
+.outputInformation .TipAmount h1, .outputInformation .Total h1 {
+  font-size: 24px;
+  font-family: "Space Mono", monospace;
+  color: hsl(172deg, 67%, 45%);
+}
+.outputInformation button {
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+  color: hsl(183deg, 100%, 15%);
+  background-color: hsl(172deg, 67%, 45%);
+  cursor: pointer;
+}
+.outputInformation button:active {
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    height: 140vh;
+    background-color: hsl(185deg, 41%, 84%);
+  }
+  main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container {
+    width: 100%;
+    height: 85%;
+    background-color: hsl(0deg, 0%, 100%);
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    display: block;
+    padding: 0px;
+  }
+  .inputInformation {
+    width: 75%;
+    height: auto;
+    overflow: hidden;
+    margin: 0px auto;
+  }
+  .billinput {
+    margin-top: 30px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .billinput p {
+    font-family: "Space Mono", monospace;
+    color: hsl(184deg, 14%, 56%);
+  }
+  .billinput div {
+    margin-top: 10px;
+    padding: 0px 20px 0 20px;
+    width: 100%;
+    height: 45px;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: hsl(189deg, 41%, 97%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .billinput div input {
+    width: 100%;
+    height: 100%;
+    background-color: hsl(189deg, 41%, 97%);
+    border: none;
+    outline: none;
+    text-align: right;
+    font-family: "Space Mono", monospace;
+    font-size: 21px;
+    color: hsl(183deg, 100%, 15%);
+  }
+  .billinput div input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 21px;
+    color: hsl(183deg, 100%, 15%);
+  }
+  .selectTip {
+    width: 100%;
+    overflow: hidden;
+  }
+  .selectTip > p {
+    margin-top: 30px;
+    font-family: "Space Mono", monospace;
+    color: hsl(184deg, 14%, 56%);
+  }
+  .selectTip .Percentage {
+    margin-top: 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 135px);
+    grid-template-rows: repeat(3 45px);
+    column-gap: 11px;
+    row-gap: 13px;
+  }
+  .selectTip .Percentage .tenPercentage {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .selectTip .Percentage .fiftyPercentage {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .selectTip .Percentage button {
+    width: 135px;
+    height: 45px;
+    border-radius: 5px;
+    background-color: hsl(183deg, 100%, 15%);
+    color: hsl(0deg, 0%, 100%);
+    font-family: "Space Mono", monospace;
+    font-size: 20px;
+    border: none;
+  }
+  .selectTip .Percentage button:active {
+    opacity: 0.9;
+  }
+  .numberOfPeople {
+    margin-top: 30px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .numberOfPeople p {
+    font-family: "Space Mono", monospace;
+    color: hsl(184deg, 14%, 56%);
+  }
+  .numberOfPeople div {
+    margin-top: 10px;
+    padding: 0px 20px 0 20px;
+    width: 100%;
+    height: 45px;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: hsl(189deg, 41%, 97%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .numberOfPeople div input {
+    width: 100%;
+    height: 100%;
+    background-color: hsl(189deg, 41%, 97%);
+    border: none;
+    outline: none;
+    text-align: right;
+    font-family: "Space Mono", monospace;
+    font-size: 21px;
+    color: hsl(183deg, 100%, 15%);
+  }
+  .numberOfPeople div input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 21px;
+    color: hsl(183deg, 100%, 15%);
+  }
+  .outputInformation {
+    margin: 30px auto;
+    padding: 20px 20px 20px 20px;
+    width: 75%;
+    height: 230px;
+    background-color: hsl(183deg, 100%, 15%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .outputInformation .TipAmount, .outputInformation .Total {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-between;
+  }
+  .outputInformation .TipAmount div p, .outputInformation .Total div p {
+    font-family: "Space Mono", monospace;
+    color: hsl(0deg, 0%, 100%);
+  }
+  .outputInformation .TipAmount div small, .outputInformation .Total div small {
+    font-family: "Space Mono", monospace;
+    color: hsl(184deg, 14%, 56%);
+  }
+  .outputInformation .TipAmount h1, .outputInformation .Total h1 {
+    font-size: 24px;
+    font-family: "Space Mono", monospace;
+    color: hsl(172deg, 67%, 45%);
+  }
+  .outputInformation button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Space Mono", monospace;
+    font-size: 16px;
+    color: hsl(183deg, 100%, 15%);
+    background-color: hsl(172deg, 67%, 45%);
+  }
+  .outputInformation button:active {
+    opacity: 0.8;
+  }
+}
+/* @media only screen and (min-width: 400px) {
+    .selectTip { 
+        .Percentage { 
+
+            display: flex;
+            justify-content: space-between;
+
+            div { 
+                width: 47%;
+                @include flex(column, space-between, none);
+            }
+
+            .fivePercentage,
+            .fifteenPercentage,
+            .fiftyPercentage,
+            .tenPercentage,
+            .twentyfivePercentage,
+            .customPercentage { 
+                margin-top: 10px;
+                width: 100%;
+                height: 45px;
+            }
+        }
+
+    }
+
+}
+
+*/
+
+/*# sourceMappingURL=style.css.map */

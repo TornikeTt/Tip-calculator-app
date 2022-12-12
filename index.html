@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator App</title>
+    <link rel="stylesheet" href="./style/style.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <!-- font -->
+
+  </head>
+  
+  <body>
+
+    <main>
+        <div class="splitter"> 
+            <h1>splitter</h1>
+        </div>
+
+        <div class="container"> 
+
+            <!-- inputInformation  ========= -->
+            <div class="inputInformation"> 
+                <div class="billinput"> 
+                    <p>Bill</p>
+
+                    <div> 
+                        <img
+                            src="./images/icon-dollar.svg" 
+                            alt="bill icon for input field"
+                            />
+                        <input type="number" placeholder="0"/>
+                    </div>
+                </div>
+
+                <div class="selectTip"> 
+                    <p>Select Tip %</p>
+                    
+                    <div class="Percentage"> 
+                            <button 
+                                onclick="Choose_Rercentage('5%')" 
+                                class="fivePercentage">
+                                5% 
+                            </button>
+
+                            <button 
+                                onclick="Choose_Rercentage('10%')" 
+                                class="tenPercentage"> 
+                                10% 
+                            </button>
+
+                            <button 
+                                onclick="Choose_Rercentage('15%')" 
+                                class="fifteenPercentage"> 
+                                15% 
+                            </button>
+
+                            <button 
+                                onclick="Choose_Rercentage('25%')" 
+                                class="twentyfivePercentage">
+                                25%
+                            </button> 
+
+                            <button 
+                                onclick="Choose_Rercentage('50%')" 
+                                class="fiftyPercentage">
+                                50%
+                            </button>
+
+                            <input 
+                                type="number" 
+                                class="customPercentage"
+                                placeholder="Custom"
+                            />  
+
+                    </div>
+                </div>
+
+                <div class="numberOfPeople"> 
+                    <p>Number of People</p>
+
+                    <div> 
+                        <img
+                            src="./images/icon-person.svg" 
+                            alt="person icone for number of poeple section"
+                            />
+                        <input type="number" placeholder="0"/>
+                    </div>
+                </div>
+            </div>
+            <!-- inputInformation  ========= -->
+
+            <!-- Output Information ======== -->
+                <div class="outputInformation"> 
+                    
+                    <div class="TipAmount"> 
+
+                        <div> 
+                            <p> Tip Amount </p> 
+                            <small> / Person </small>
+                        </div>
+
+                        <h1> 0.00</h1>
+
+                    </div>
+
+                    <div class="Total"> 
+
+                        <div> 
+                            <p> Total </p> 
+                            <small> / Person </small>
+                        </div>
+
+                        <h1> 0.00 </h1>
+
+                    </div>
+
+                    <button>RESET</button>
+
+                </div>
+            <!-- Output Information ======== -->
+
+
+
+        </div>
+
+    </main>
+
+
+    <script src="Script.js"></script>
+
+  </body>
+
+</html>

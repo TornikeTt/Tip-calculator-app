@@ -1,0 +1,289 @@
+@media only screen and (max-width: 375px ) {
+    body { 
+        height: 140vh;
+        background-color: $Light-Grayish-Cyan;
+    }
+
+    main { 
+        width: 100%;
+        height: 100%;
+
+        @include flex(column,space-between,center);
+    }
+
+    .container { 
+        width: 100%;
+        height: 85%;
+        
+        background-color: $White;
+
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+
+        display: block;
+
+        padding: 0px;
+    }
+
+    // inputInformation  ========= -->
+    .inputInformation { 
+        width: 75%;
+        height: auto;
+        overflow: hidden;
+
+        margin: 0px auto;
+    }
+
+    .billinput { 
+        margin-top: $margin-Between-sections; 
+
+        width: 100%;
+        overflow: hidden;
+
+        @include flex(column, center, flex-start);
+
+        p { 
+            font-family: 'Space Mono', monospace;
+            color: $Grayish-Cyan;
+        }
+
+        div { 
+            margin-top: $margin-between-text-and-div;
+            padding: 0px 20px 0 20px;
+
+            width: 100%;
+            height: 45px;
+            border-radius: 2px;
+
+            @include flex(row, flex-start, center);
+            background-color: $Very-Light-Grayish-Cyan;
+
+            @include flex(row, space-between, center);
+
+            input { 
+                width: 100%;
+                height: 100%;
+                background-color: $Very-Light-Grayish-Cyan;
+                border: none;
+
+                outline: none;
+                text-align: right;
+                font-family: 'Space Mono', monospace;
+                font-size: 21px;
+                color:$Very-Dark-Cyan;
+
+                &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                    font-size: 21px;
+                    color:$Very-Dark-Cyan;
+                }
+
+            }
+        }
+    }
+
+    .selectTip { 
+        width: 100%;
+        overflow: hidden;
+
+        & > p { 
+            margin-top: $margin-Between-sections;
+
+            font-family: 'Space Mono', monospace;
+            color: $Grayish-Cyan;
+        }
+
+        .Percentage { 
+            margin-top: $margin-between-text-and-div;
+            width: 100%;
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 135px);
+            grid-template-rows: repeat(3 45px);
+            column-gap: 11px;
+            row-gap: 13px; 
+            
+            .tenPercentage { 
+                grid-row-start: 1;
+                grid-row-end: 2;
+
+                grid-column-start: 2;
+                grid-column-end: 3;
+
+            }
+
+            .fiftyPercentage { 
+                grid-row-start: 3;
+                grid-row-end: 4;
+
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+
+            button { 
+                width: 135px;
+                height: 45px;
+                border-radius: 5px;
+
+                background-color:$Very-Dark-Cyan;
+
+                color: $White;
+
+                font-family: 'Space Mono', monospace;
+                font-size: 20px;
+                border: none;
+
+                &:active { 
+                    opacity: 0.9;
+                }
+            }
+        }
+
+    }
+
+    .numberOfPeople { 
+
+        margin-top: $margin-Between-sections; 
+
+        width: 100%;
+        overflow: hidden;
+
+        @include flex(column, center, flex-start);
+
+        p { 
+            font-family: 'Space Mono', monospace;
+            color: $Grayish-Cyan;
+        }
+
+        div { 
+            margin-top: $margin-between-text-and-div;
+            padding: 0px 20px 0 20px;
+
+            width: 100%;
+            height: 45px;
+            border-radius: 2px;
+
+            @include flex(row, flex-start, center);
+            background-color: $Very-Light-Grayish-Cyan;
+
+            @include flex(row, space-between, center);
+
+            input { 
+                width: 100%;
+                height: 100%;
+                background-color: $Very-Light-Grayish-Cyan;
+                border: none;
+
+                outline: none;
+                text-align: right;
+                font-family: 'Space Mono', monospace;
+                font-size: 21px;
+                color:$Very-Dark-Cyan;
+
+                &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                    font-size: 21px;
+                    color:$Very-Dark-Cyan;
+                }
+
+            }
+        }
+
+    }
+    // inputInformation  ========= -->
+
+
+
+    // Output Information ======== -->
+    .outputInformation { 
+        margin: $margin-Between-sections auto;
+        padding: 20px 20px 20px 20px;
+
+        width: 75%;
+        height: 230px;
+        background-color: $Very-Dark-Cyan;
+        border-radius: 10px;
+
+        @include flex(column, space-around, center);
+
+        .TipAmount {  
+            width: 100%;
+            @include flex(row , space-between, space-between);
+
+            div { 
+                p { 
+                    font-family: 'Space Mono', monospace;
+                    color: $White;
+                }
+
+                small { 
+                    font-family: 'Space Mono', monospace;
+                    color: $Grayish-Cyan;
+                }
+            }
+
+            h1 { 
+                font-size: 24px;
+                font-family: 'Space Mono', monospace;
+                color: $Strong-Cyan;
+            }
+        }
+
+        .Total { 
+            @extend .TipAmount;
+        }
+
+        button { 
+            width: 100%;
+            height: 40px;
+
+            border: none;
+            border-radius: 5px;
+
+            font-family: 'Space Mono', monospace;
+            font-size: 16px;
+            color: $Very-Dark-Cyan;
+
+
+            background-color: $Strong-Cyan;
+
+            &:active { 
+                opacity: 0.8;
+            }
+        }
+    }
+
+
+}
+
+
+/* @media only screen and (min-width: 400px) {
+    .selectTip { 
+        .Percentage { 
+
+            display: flex;
+            justify-content: space-between;
+            
+            div { 
+                width: 47%;
+                @include flex(column, space-between, none);
+            }
+
+            .fivePercentage,
+            .fifteenPercentage,
+            .fiftyPercentage,
+            .tenPercentage,
+            .twentyfivePercentage,
+            .customPercentage { 
+                margin-top: 10px;
+                width: 100%;
+                height: 45px;
+            }
+        }
+
+    }
+
+}
+
+*/

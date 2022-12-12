@@ -1,0 +1,377 @@
+$Strong-Cyan: hsl(172, 67%, 45%);
+
+$Very-Dark-Cyan: hsl(183, 100%, 15%);
+$Dark-Grayish-Cyan: hsl(186, 14%, 43%);
+$Grayish-Cyan: hsl(184, 14%, 56%);
+$Light-Grayish-Cyan: hsl(185, 41%, 84%);
+$Very-Light-Grayish-Cyan: hsl(189, 41%, 97%);
+$White: hsl(0, 0%, 100%);
+
+$margin-Between-sections: 30px;
+$margin-between-text-and-div: 10px;
+
+@mixin flex($direction, $justify, $align) { 
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+* { 
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body { 
+    width: 100%;
+    height: 100vh;
+
+    background-color: $Light-Grayish-Cyan;
+
+    @include flex(column,center,center);
+}
+
+main { 
+    width: 100%;
+    height: 70%;
+}
+
+.splitter { 
+    width: 100%; 
+    height: 15%;
+    
+    @include flex(row, center, center);
+    text-align: center;
+
+
+    h1 { 
+        font-family: 'Space Mono', monospace;
+        text-transform: uppercase;
+
+        word-break: break-all; 
+        width: 104px;
+        letter-spacing: 10px;
+
+        font-size: 20px;
+
+        color:$Dark-Grayish-Cyan;
+    }
+}
+
+
+.container { 
+    width: 770px;
+    height: 390px;;
+
+    background-color: $White;
+    border-radius: 25px;
+
+    @include flex( row , space-between, flex-start);
+    margin: 0px auto;
+    margin-top: 40px;
+
+    padding: 20px;
+
+}
+
+// inputInformation  ========= -->
+
+.inputInformation { 
+    width: 50%;
+    height: 100%;
+
+    overflow: hidden;
+
+    margin: 0px auto;
+}
+
+
+.billinput { 
+    width: 95%;
+    overflow: hidden;
+
+    @include flex(column, center, flex-start);
+
+    p { 
+        font-family: 'Space Mono', monospace;
+        color: $Grayish-Cyan;
+    }
+
+    div { 
+        margin-top: 5px;
+        padding: 0px 20px 0 20px;
+
+        width: 100%;
+        height: 37px;
+        border-radius: 2px;
+
+        @include flex(row, flex-start, center);
+        background-color: $Very-Light-Grayish-Cyan;
+
+        @include flex(row, space-between, center);
+
+
+        cursor: pointer;
+
+        input { 
+            width: 100%;
+            height: 100%;
+            background-color: $Very-Light-Grayish-Cyan;
+            border: none;
+
+            cursor: pointer;
+
+            outline: none;
+            text-align: right;
+            font-family: 'Space Mono', monospace;
+            font-size: 21px;
+            color:$Very-Dark-Cyan;
+
+            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                font-size: 21px;
+                color:$Very-Dark-Cyan;
+            }
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+
+
+            
+        }
+
+        &:hover { 
+            border: 2px solid $Strong-Cyan;
+        }
+
+
+    }
+
+
+}
+
+.selectTip { 
+    width: 95%;
+    overflow: hidden;
+
+    & > p { 
+        margin-top: $margin-Between-sections;
+
+        font-family: 'Space Mono', monospace;
+        color: $Grayish-Cyan;
+    }
+
+    .Percentage { 
+        margin-top: $margin-between-text-and-div;
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: repeat(3, 105px);
+        grid-template-rows: repeat(2 45px);
+
+        column-gap: 9px;
+        row-gap: 10px; 
+
+        .tenPercentage { 
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+
+        .fiftyPercentage { 
+            grid-row-start: 2;
+            grid-row-end: 3;
+
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+
+        .customPercentage { 
+            text-align: right; 
+            background-color:$Very-Dark-Cyan;
+
+            font-family: 'Space Mono', monospace;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+
+            font-size: 20px; 
+            padding-right: 5px;
+
+
+            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                color: $White;
+                
+            }
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+
+
+            &:focus {
+                opacity: 0.9;
+                background-color: $White;
+                border: 1px solid $Strong-Cyan;
+            }
+
+        }
+
+        button { 
+            cursor: pointer;
+            width: 105px;
+            height: 45px;
+            border-radius: 5px;
+
+            background-color:$Very-Dark-Cyan;
+
+            color: $White;
+
+            font-family: 'Space Mono', monospace;
+            font-size: 20px;
+            border: none;
+
+            &:focus {
+                opacity: 0.9;
+                background-color: $Strong-Cyan;
+            }
+        }
+    }
+
+}
+
+
+.numberOfPeople { 
+
+    margin-top: $margin-Between-sections; 
+
+    width: 90%;
+    overflow: hidden;
+
+    @include flex(column, center, flex-start);
+
+
+
+    p { 
+        font-family: 'Space Mono', monospace;
+        color: $Grayish-Cyan;
+    }
+
+    div { 
+        margin-top: $margin-between-text-and-div;
+        padding: 0px 20px 0 20px;
+
+        width: 100%;
+        height: 45px;
+        border-radius: 2px;
+
+        @include flex(row, flex-start, center);
+        background-color: $Very-Light-Grayish-Cyan;
+
+        @include flex(row, space-between, center);
+
+        input { 
+            width: 100%;
+            height: 100%;
+            background-color: $Very-Light-Grayish-Cyan;
+            border: none;
+
+            cursor: pointer;
+
+            outline: none;
+            text-align: right;
+            font-family: 'Space Mono', monospace;
+            font-size: 21px;
+            color:$Very-Dark-Cyan;
+
+            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                font-size: 21px;
+                color:$Very-Dark-Cyan;
+            }
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+        }
+
+        &:hover { 
+            border: 2px solid $Strong-Cyan;
+        }
+    }
+
+}
+
+// inputInformation  ========= -->
+
+.outputInformation { 
+    width: 50%;
+    height: 100%;
+
+    background-color: $Very-Dark-Cyan;
+    border-radius: 20px;
+
+    padding: 35px 35px 0px 35px;
+    @include flex(column, space-around, center);
+
+    .TipAmount {  
+        width: 100%;
+        @include flex(row , space-between, space-between);
+
+        div { 
+            p { 
+                font-family: 'Space Mono', monospace;
+                color: $White;
+            }
+
+            small { 
+                font-family: 'Space Mono', monospace;
+                color: $Grayish-Cyan;
+            }
+        }
+
+        h1 { 
+            font-size: 24px;
+            font-family: 'Space Mono', monospace;
+            color: $Strong-Cyan;
+        }
+    }
+
+    .Total { 
+        @extend .TipAmount;
+    }
+
+
+    button { 
+        width: 100%;
+        height: 35px;
+
+        border: none;
+        border-radius: 5px;
+
+        font-family: 'Space Mono', monospace;
+        font-size: 16px;
+        color: $Very-Dark-Cyan;
+
+
+        background-color: $Strong-Cyan;
+
+        cursor: pointer;
+
+        &:active { 
+            opacity: 0.8;
+        }
+    }
+
+}
+
+
+@import "./forMobile.scss";
